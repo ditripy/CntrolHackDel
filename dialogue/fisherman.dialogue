@@ -7,6 +7,8 @@ if (fisherman_itemcollect == "false"):
 	Player: I need some find sand and gravel.
 	Fisherman: For the water? It did seem dirty.
 	Player: Yes! 
+set fisherman_itemcollect = "true"
+set all_items_obtained += 1
 
 if (fisherman_itemcollect == "true"):
 	Fisherman: It's up to you now!

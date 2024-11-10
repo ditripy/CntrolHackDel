@@ -8,4 +8,5 @@ Book: To make a water filter, you need\:
 		 pebbles of gravel,
 		 thyme, pine needles and resin, rosemary, eucalyptus
 		 clear plastic battles
+set visited_library = "true"
 => END

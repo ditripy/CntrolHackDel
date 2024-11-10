@@ -1,24 +1,315 @@
-[gd_scene load_steps=3 format=3 uid="uid://clsrunrf3ebwx"]
+[gd_scene load_steps=29 format=3 uid="uid://bvtvxag5to1s2"]
 
-[ext_resource type="PackedScene" uid="uid://dpeakh6so01vq" path="res://map/map.tscn" id="1_8pwec"]
-[ext_resource type="PackedScene" uid="uid://bvxc0sj5ss8y5" path="res://character/characters/player_slime.tscn" id="2_ldofh"]
+[ext_resource type="PackedScene" uid="uid://dpeakh6so01vq" path="res://Map/map.tscn" id="1_rliux"]
+[ext_resource type="PackedScene" uid="uid://dgakmv82sftui" path="res://Character/player.tscn" id="2_6m84j"]
+[ext_resource type="PackedScene" uid="uid://ctxwellt5q1jn" path="res://Map/dialog_action.tscn" id="3_kbqiy"]
+[ext_resource type="Resource" uid="uid://cbv06swt5qco4" path="res://dialogue/mayor.dialogue" id="4_wiawo"]
+[ext_resource type="Resource" uid="uid://beh3xfs88kaj0" path="res://dialogue/librarian.dialogue" id="5_748xd"]
+[ext_resource type="PackedScene" uid="uid://cxfw7rhhmocdb" path="res://Map/action_ARea.tscn" id="5_gehne"]
+[ext_resource type="Resource" uid="uid://cw0y0rjmtxhv4" path="res://dialogue/books.dialogue" id="6_8lgyq"]
+[ext_resource type="Resource" uid="uid://b6s0n2vytb4ug" path="res://dialogue/doctorparents.dialogue" id="7_v71dj"]
+[ext_resource type="Resource" uid="uid://cqa0tikjhdr15" path="res://dialogue/fisherman.dialogue" id="8_jo7cv"]
+[ext_resource type="Resource" uid="uid://bc1c68p635717" path="res://dialogue/farmer.dialogue" id="9_e21hy"]
+[ext_resource type="Resource" uid="uid://dcb4irce7ltus" path="res://dialogue/shopkeeper.dialogue" id="10_3iutl"]
+[ext_resource type="Resource" uid="uid://d1fvtluuadcyd" path="res://dialogue/scientist.dialogue" id="11_2so4k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ydfhg"]
+size = Vector2(32, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y4rn7"]
+size = Vector2(311, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0te23"]
+size = Vector2(9, 139)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c7man"]
+size = Vector2(5, 159.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1jpex"]
+size = Vector2(222, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xoh5p"]
+size = Vector2(144, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nnw1r"]
+size = Vector2(52, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kb5w3"]
+size = Vector2(20, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ab77b"]
+size = Vector2(16, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yexku"]
+size = Vector2(17, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ckabh"]
+size = Vector2(20, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0n0pn"]
+size = Vector2(23, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bus6"]
+size = Vector2(24, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wulrc"]
+size = Vector2(21, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_impjs"]
+size = Vector2(21, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lhuqy"]
+size = Vector2(43, 14)
 
 [node name="main" type="Node"]
 
-[node name="map" parent="." instance=ExtResource("1_8pwec")]
+[node name="map" parent="." instance=ExtResource("1_rliux")]
 
-[node name="Player Slime" parent="." instance=ExtResource("2_ldofh")]
-position = Vector2(182, 304)
-metadata/_edit_group_ = true
+[node name="Player Slime" parent="." instance=ExtResource("2_6m84j")]
+position = Vector2(258, 333)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player Slime"]
 remote_path = NodePath("../../Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(182, 304)
+position = Vector2(258, 333)
 zoom = Vector2(3, 3)
-limit_left = -2000
-limit_top = -1600
-limit_right = 2000
-limit_bottom = 1650
-editor_draw_limits = true
+
+[node name="Boarder" type="Node" parent="."]
+
+[node name="hut" type="StaticBody2D" parent="Boarder"]
+position = Vector2(-326, -66)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boarder/hut"]
+position = Vector2(7, 0.5)
+shape = SubResource("RectangleShape2D_ydfhg")
+
+[node name="hut2" type="StaticBody2D" parent="Boarder"]
+position = Vector2(-374, -66)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boarder/hut2"]
+position = Vector2(7, 0.5)
+shape = SubResource("RectangleShape2D_ydfhg")
+
+[node name="hut3" type="StaticBody2D" parent="Boarder"]
+position = Vector2(-614, -290)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boarder/hut3"]
+position = Vector2(7, 0.5)
+shape = SubResource("RectangleShape2D_ydfhg")
+
+[node name="hut4" type="StaticBody2D" parent="Boarder"]
+position = Vector2(-566, -290)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boarder/hut4"]
+position = Vector2(7, 0.5)
+shape = SubResource("RectangleShape2D_ydfhg")
+
+[node name="hut5" type="StaticBody2D" parent="Boarder"]
+position = Vector2(-518, -290)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boarder/hut5"]
+position = Vector2(7, 0.5)
+shape = SubResource("RectangleShape2D_ydfhg")
+
+[node name="hut6" type="StaticBody2D" parent="Boarder"]
+position = Vector2(-470, -290)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boarder/hut6"]
+position = Vector2(7, 0.5)
+shape = SubResource("RectangleShape2D_ydfhg")
+
+[node name="hut7" type="StaticBody2D" parent="Boarder"]
+position = Vector2(-422, -290)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boarder/hut7"]
+position = Vector2(7, 0.5)
+shape = SubResource("RectangleShape2D_ydfhg")
+
+[node name="hut8" type="StaticBody2D" parent="Boarder"]
+position = Vector2(-374, -290)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boarder/hut8"]
+position = Vector2(7, 0.5)
+shape = SubResource("RectangleShape2D_ydfhg")
+
+[node name="hut9" type="StaticBody2D" parent="Boarder"]
+position = Vector2(-326, -291)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boarder/hut9"]
+position = Vector2(7, 0.5)
+shape = SubResource("RectangleShape2D_ydfhg")
+
+[node name="hut10" type="StaticBody2D" parent="Boarder"]
+position = Vector2(-614, -66)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boarder/hut10"]
+position = Vector2(7, 0.5)
+shape = SubResource("RectangleShape2D_ydfhg")
+
+[node name="hut11" type="StaticBody2D" parent="Boarder"]
+position = Vector2(-566, -66)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boarder/hut11"]
+position = Vector2(7, 0.5)
+shape = SubResource("RectangleShape2D_ydfhg")
+
+[node name="hut12" type="StaticBody2D" parent="Boarder"]
+position = Vector2(-518, -65)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boarder/hut12"]
+position = Vector2(7, 0.5)
+shape = SubResource("RectangleShape2D_ydfhg")
+
+[node name="hut13" type="StaticBody2D" parent="Boarder"]
+position = Vector2(-470, -66)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boarder/hut13"]
+position = Vector2(7, 0.5)
+shape = SubResource("RectangleShape2D_ydfhg")
+
+[node name="hut14" type="StaticBody2D" parent="Boarder"]
+position = Vector2(-422, -66)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boarder/hut14"]
+position = Vector2(7, 0.5)
+shape = SubResource("RectangleShape2D_ydfhg")
+
+[node name="Fence" type="Node" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Fence"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fence/StaticBody2D"]
+position = Vector2(-896.5, -297.5)
+shape = SubResource("RectangleShape2D_y4rn7")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Fence"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fence/StaticBody2D2"]
+position = Vector2(-742.5, -360.5)
+shape = SubResource("RectangleShape2D_0te23")
+
+[node name="Hill" type="Node" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Hill"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hill/StaticBody2D"]
+position = Vector2(-482.5, 239.75)
+shape = SubResource("RectangleShape2D_c7man")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Hill"]
+position = Vector2(-217, -17)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hill/StaticBody2D2"]
+position = Vector2(-482.5, 256.75)
+shape = SubResource("RectangleShape2D_c7man")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Hill"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hill/StaticBody2D3"]
+position = Vector2(-591, 163.5)
+shape = SubResource("RectangleShape2D_1jpex")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Hill"]
+position = Vector2(-683, 311)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hill/StaticBody2D4"]
+position = Vector2(58, 3.5)
+shape = SubResource("RectangleShape2D_xoh5p")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Hill"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hill/StaticBody2D5"]
+position = Vector2(-507, 314.5)
+shape = SubResource("RectangleShape2D_nnw1r")
+
+[node name="NPC" type="Node" parent="."]
+
+[node name="Mayor" parent="NPC" instance=ExtResource("3_kbqiy")]
+position = Vector2(285, 266)
+dialogue_resource = ExtResource("4_wiawo")
+dialogue_start = "mayor"
+
+[node name="CollisionShape2D" parent="NPC/Mayor" index="0"]
+position = Vector2(-4, -13)
+shape = SubResource("RectangleShape2D_kb5w3")
+
+[node name="Lib" parent="NPC" instance=ExtResource("3_kbqiy")]
+position = Vector2(296, 40)
+dialogue_resource = ExtResource("5_748xd")
+dialogue_start = "librarian"
+
+[node name="CollisionShape2D" parent="NPC/Lib" index="0"]
+position = Vector2(1, -2.5)
+shape = SubResource("RectangleShape2D_ab77b")
+
+[node name="book" parent="NPC" instance=ExtResource("3_kbqiy")]
+position = Vector2(312, 41)
+dialogue_resource = ExtResource("6_8lgyq")
+dialogue_start = "librarybook"
+
+[node name="CollisionShape2D" parent="NPC/book" index="0"]
+position = Vector2(4.5, -3)
+shape = SubResource("RectangleShape2D_yexku")
+
+[node name="mother" parent="NPC" instance=ExtResource("3_kbqiy")]
+position = Vector2(648, -485)
+dialogue_resource = ExtResource("7_v71dj")
+dialogue_start = "doctormother"
+
+[node name="CollisionShape2D" parent="NPC/mother" index="0"]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_ckabh")
+
+[node name="fisher" parent="NPC" instance=ExtResource("3_kbqiy")]
+position = Vector2(327, 359)
+dialogue_resource = ExtResource("8_jo7cv")
+dialogue_start = "fisherman"
+
+[node name="CollisionShape2D" parent="NPC/fisher" index="0"]
+position = Vector2(-1.5, 1.5)
+shape = SubResource("RectangleShape2D_0n0pn")
+
+[node name="farmer" parent="NPC" instance=ExtResource("3_kbqiy")]
+position = Vector2(-919, -279)
+dialogue_resource = ExtResource("9_e21hy")
+dialogue_start = "farmer"
+
+[node name="CollisionShape2D" parent="NPC/farmer" index="0"]
+position = Vector2(1, 3)
+shape = SubResource("RectangleShape2D_1bus6")
+
+[node name="shopkeeper" parent="NPC" instance=ExtResource("3_kbqiy")]
+position = Vector2(-455, -107)
+dialogue_resource = ExtResource("10_3iutl")
+dialogue_start = "shopkeeper"
+
+[node name="CollisionShape2D" parent="NPC/shopkeeper" index="0"]
+position = Vector2(0.5, 4.5)
+shape = SubResource("RectangleShape2D_wulrc")
+
+[node name="scientist" parent="NPC" instance=ExtResource("3_kbqiy")]
+position = Vector2(-519, 267)
+dialogue_resource = ExtResource("11_2so4k")
+dialogue_start = "scientist"
+
+[node name="CollisionShape2D" parent="NPC/scientist" index="0"]
+position = Vector2(-0.5, -1.5)
+shape = SubResource("RectangleShape2D_impjs")
+
+[node name="townHallRooff" parent="." instance=ExtResource("5_gehne")]
+position = Vector2(306, 234)
+
+[node name="CollisionShape2D" parent="townHallRooff" index="0"]
+position = Vector2(6.5, -2)
+shape = SubResource("RectangleShape2D_lhuqy")
+
+[editable path="NPC/Mayor"]
+[editable path="NPC/Lib"]
+[editable path="NPC/book"]
+[editable path="NPC/mother"]
+[editable path="NPC/fisher"]
+[editable path="NPC/farmer"]
+[editable path="NPC/shopkeeper"]
+[editable path="NPC/scientist"]
+[editable path="townHallRooff"]

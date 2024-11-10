@@ -9,7 +9,8 @@ if (shop_obtained == "false"):
 	Shopkeeper: And why do you need all that?
 	Player: The water... (maybe I can do something here). The mayor sent me.
 	Shopkeeper: Oh! Mr Mayor! Well it's on the house then! But scoot, others cant see me handing you free merchandise.
-
+set shop_obtained = "true"
+set all_items_obtained += 1
 if (shop_obtained == "true"):
 	Shopkeeper: Get outta here!
 => END

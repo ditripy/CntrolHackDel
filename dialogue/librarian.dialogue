@@ -8,6 +8,7 @@ if (visited_library == "false"):
 	Librarian: I knew something was wrong! What can I do to help?
 	Player: Surely you must have a book that can teach me to make a water filter. 
 	Librarian: I just might, follow me!
+	set visited_librarian = "true"
 
 if (visited_library == "true"):
 	Librarian: If you wanted a refresher: talk to the farmer, doctor, fisherman and shopkeeper. They'll be able to give you everything you need.

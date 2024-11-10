@@ -18,8 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 SignalBus="*res://singletons/SignalBus.gd"
-DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 State="*res://state.gd"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [dialogue_manager]
 

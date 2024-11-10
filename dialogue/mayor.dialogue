@@ -1,5 +1,4 @@
 ~ mayor
-
 Mayor: [[Hi|Hello|Howdy]], player!
 if (visited_librarian == "false"):
 	Player: The water is polluted, mayor!
