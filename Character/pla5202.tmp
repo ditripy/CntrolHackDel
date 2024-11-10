@@ -174,7 +174,7 @@ hframes = 44
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 6)
+position = Vector2(-9, 2)
 shape = SubResource("RectangleShape2D_abskl")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -187,5 +187,3 @@ tree_root = SubResource("AnimationNodeStateMachine_1ylfo")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Idle/blend_position = Vector2(-0.052, -0.1)
 parameters/Walk/blend_position = Vector2(0.104, 0.576652)
-
-[node name="RayCast2D" type="RayCast2D" parent="."]
