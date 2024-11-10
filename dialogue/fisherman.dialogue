@@ -1,0 +1,14 @@
+~ fisherman
+Fisherman: Hullo, player!
+
+if (fisherman_itemcollect == "false"):
+	Player: I wish I was here for food, but I actually need something else.
+	Fisherman: Oh, I'm surrpised. What is it then?
+	Player: I need some find sand and gravel.
+	Fisherman: For the water? It did seem dirty.
+	Player: Yes! 
+
+if (fisherman_itemcollect == "true"):
+	Fisherman: It's up to you now!
+	
+=> END

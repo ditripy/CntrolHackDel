@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
 @export var move_speed : float = 100
+@onready var interactionArea: Area2D = $InteractionArea
+
 
 func _physics_process(_delta):
 	#Get input direction
@@ -15,5 +17,13 @@ func _physics_process(_delta):
 	#Move and Slide function uses velocity of character body to move character on map
 	move_and_slide()
 	
+func _unhandled_input(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed("interact"):
+		var interation = interactionArea.get_overlapping_areas()
+		if (interation.size() > 0):
+			interation[0].action()
+			return
+	
+ 	
 	
 	

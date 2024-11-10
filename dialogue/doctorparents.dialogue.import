@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://b6s0n2vytb4ug"
+path="res://.godot/imported/doctorparents.dialogue-f3f2e0b20bd6a215f84e06ee3c05d1c6.tres"
+
+[deps]
+
+source_file="res://dialogue/doctorparents.dialogue"
+dest_files=["res://.godot/imported/doctorparents.dialogue-f3f2e0b20bd6a215f84e06ee3c05d1c6.tres"]
+
+[params]
+
+defaults=true

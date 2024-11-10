@@ -1,0 +1,12 @@
+~ scientist
+Scientist: The librarian and the mayor have got me all up to speed. Tell me, have you got everything?
+
+if (all_items_obtained == "false"):
+	Player: Not yet. I'm still going.
+	Scientist: Well, don't push yourself. But get them soon!
+
+if (all_items_obtained == "true"):
+	Player: Yes! Here you are.
+	Scientist: Wonderful. I've got the nails and pliers, lets get to work.
+
+=> END

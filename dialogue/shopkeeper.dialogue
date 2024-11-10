@@ -1,0 +1,15 @@
+~ shopkeeper
+Shopkeeper: Player.
+Player: Shopkeeper.
+
+if (shop_obtained == "false"):
+	Player: I'm here to buy some items.
+	Shopkeeper: Out with it then! What do you need?
+	Player: I need charcoal, plastic bottles and containers.
+	Shopkeeper: And why do you need all that?
+	Player: The water... (maybe I can do something here). The mayor sent me.
+	Shopkeeper: Oh! Mr Mayor! Well it's on the house then! But scoot, others cant see me handing you free merchandise.
+
+if (shop_obtained == "true"):
+	Shopkeeper: Get outta here!
+=> END

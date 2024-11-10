@@ -1,42 +1,30 @@
-[gd_scene load_steps=10 format=3 uid="uid://bwsueb6xig5b"]
+[gd_scene load_steps=7 format=3 uid="uid://bwsueb6xig5b"]
 
-[ext_resource type="PackedScene" uid="uid://o4uu6r126qee" path="res://map/update_area1.tscn" id="1_fugqo"]
-[ext_resource type="PackedScene" uid="uid://dgakmv82sftui" path="res://character/player.tscn" id="1_orvnh"]
 [ext_resource type="PackedScene" uid="uid://dpeakh6so01vq" path="res://map/map.tscn" id="1_paqqf"]
-[ext_resource type="Script" path="res://map/UpdateArea1.gd" id="2_qrbsc"]
-[ext_resource type="PackedScene" uid="uid://ci54k6qivv1qv" path="res://map/dialog_area.tscn" id="3_fgbmr"]
-[ext_resource type="PackedScene" uid="uid://cmgagixvdhwuw" path="res://ui/dialog_player.tscn" id="4_fto6r"]
-[ext_resource type="Script" path="res://level/update_dialog_1.gd" id="7_58dvi"]
+[ext_resource type="PackedScene" uid="uid://bvxc0sj5ss8y5" path="res://character/characters/player_slime.tscn" id="2_aaffv"]
+[ext_resource type="PackedScene" uid="uid://cfjq4iasuds35" path="res://map/dialog_action.tscn" id="3_v4cxs"]
+[ext_resource type="Resource" uid="uid://b7xp847ga4pea" path="res://dialogue/chief.dialogue" id="4_nqjfs"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_k6v3o"]
-size = Vector2(18, 16)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hl28p"]
+size = Vector2(16, 16)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wqh6a"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qb05u"]
 size = Vector2(16, 16)
 
 [node name="Game level" type="Node2D"]
 position = Vector2(-17, 53)
 metadata/_edit_group_ = true
 
-[node name="UpdateArea" parent="." instance=ExtResource("1_fugqo")]
-position = Vector2(136, -43)
-script = ExtResource("2_qrbsc")
-
-[node name="CollisionShape2D" parent="UpdateArea" index="0"]
-position = Vector2(0, 3)
-shape = SubResource("RectangleShape2D_k6v3o")
-
 [node name="map" parent="." instance=ExtResource("1_paqqf")]
 
-[node name="Player Slime" parent="." instance=ExtResource("1_orvnh")]
-position = Vector2(293, 191)
-metadata/_edit_group_ = true
+[node name="Player Slime" parent="." instance=ExtResource("2_aaffv")]
+position = Vector2(269, 181)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player Slime"]
 remote_path = NodePath("../../Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(293, 191)
+position = Vector2(269, 181)
 zoom = Vector2(4, 4)
 limit_left = -1200
 limit_top = -700
@@ -44,19 +32,20 @@ limit_right = 1220
 limit_bottom = 650
 editor_draw_limits = true
 
-[node name="DialogArea_Water" parent="." instance=ExtResource("3_fgbmr")]
-position = Vector2(293, 135)
-dialog_key = "Chief"
+[node name="DialogAction" parent="." instance=ExtResource("3_v4cxs")]
+dialogue_resource = ExtResource("4_nqjfs")
 
-[node name="CollisionShape2D" parent="DialogArea_Water" index="0"]
-position = Vector2(4, 1)
-shape = SubResource("RectangleShape2D_wqh6a")
+[node name="CollisionShape2D" parent="DialogAction" index="0"]
+position = Vector2(297, 136)
+shape = SubResource("RectangleShape2D_hl28p")
 
-[node name="DialogPlayer" parent="." instance=ExtResource("4_fto6r")]
-scene_text_file = "res://json/Wolrd-Dialog.json"
+[node name="UpdateDialog1" parent="." instance=ExtResource("3_v4cxs")]
+dialogue_resource = ExtResource("4_nqjfs")
+dialogue_start = "update"
 
-[node name="UpdateDialog1" type="Node2D" parent="."]
-script = ExtResource("7_58dvi")
+[node name="CollisionShape2D" parent="UpdateDialog1" index="0"]
+position = Vector2(137, -40)
+shape = SubResource("RectangleShape2D_qb05u")
 
-[editable path="UpdateArea"]
-[editable path="DialogArea_Water"]
+[editable path="DialogAction"]
+[editable path="UpdateDialog1"]
