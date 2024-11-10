@@ -1,7 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://bwsueb6xig5b"]
+[gd_scene load_steps=3 format=3 uid="uid://bwsueb6xig5b"]
 
 [ext_resource type="PackedScene" uid="uid://dgakmv82sftui" path="res://Character/player.tscn" id="1_orvnh"]
+[ext_resource type="PackedScene" uid="uid://dpeakh6so01vq" path="res://Map/map.tscn" id="2_4yw7w"]
 
 [node name="Game level" type="Node2D"]
 
+[node name="map" parent="." instance=ExtResource("2_4yw7w")]
+position = Vector2(728, 456)
+
 [node name="Player Slime" parent="." instance=ExtResource("1_orvnh")]
+position = Vector2(1026, 582)
