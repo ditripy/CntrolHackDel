@@ -1,0 +1,16 @@
+~ mayor
+Mayor: [[Hi|Hello|Howdy]], player!
+if (visited_librarian == "false"):
+	Player: The water is polluted, mayor!
+	Mayor: The cities can't help us, and I don't know what to do.
+	Player: It's up to me then, I'll find a way.
+	Mayor: Then go to the library! The librarian can help you.
+
+else if (visited_librarian == "true"):
+	Player: I talked to her! Now I just need to talk to everyone else to make these new water filters.
+	Mayor: Well, good luck. If anyone can do it, it's you.
+
+if (filter_obtained == "true"):
+	Mayor: Thank you. I knew you could've done it.
+	
+=> END 

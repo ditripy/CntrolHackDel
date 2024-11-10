@@ -1,0 +1,15 @@
+~ farmer
+Farmer: Hey, player!
+if (plants_collected == "false"):
+	Farmer: What did you need?
+	Player: I needed thyme, pine needles and resin, rosemary and eucalyptus.
+	Farmer: What for?
+	Player: I'm making a water filter! The water's polluted.
+	Farmer: Oh, that's why my wife is sick. Alright, here you go.
+set plants_collected = "true"
+set all_items_obtained += 1
+
+if (plants_collected == "true"):
+	Farmer: Well, good luck!
+
+=> END

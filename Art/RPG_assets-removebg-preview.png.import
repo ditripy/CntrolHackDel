@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-
-path="res://.godot/imported/Girl-Sheet.png-4d9c4ea449c3a886bb95285f7dec89d4.ctex"
+uid="uid://re3vspm0f8t"
+path="res://.godot/imported/RPG_assets-removebg-preview.png-ac7d086fad8f263118b26ad539a90d3f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Girl-Sheet.png"
-dest_files=["res://.godot/imported/Girl-Sheet.png-4d9c4ea449c3a886bb95285f7dec89d4.ctex"]
+source_file="res://Art/RPG_assets-removebg-preview.png"
+dest_files=["res://.godot/imported/RPG_assets-removebg-preview.png-ac7d086fad8f263118b26ad539a90d3f.ctex"]
 
 [params]
 

@@ -1,0 +1,18 @@
+~ start 
+CHEIF: Hi Y/N!
+
+if visit_house == "true":
+	Y/N: I visited the house
+else:
+	CHIEF: Go visit your house!
+=> END
+
+~ update
+Y/N: Nice House!
+set visit_house = "true"
+=> END
+
+~ update2
+Y/N: Nice House!
+set visit_house = "true"
+=> END

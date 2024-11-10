@@ -7,6 +7,7 @@ extends CharacterBody2D
 var animation_speed = 3
 var moving = false 
 
+
 var tile_size = 16
 var inputs = {"right": Vector2.RIGHT,
 			  "left": Vector2.LEFT,
@@ -26,6 +27,7 @@ func _unhandled_input(event):
 	for dir in inputs.keys():
 		if event.is_action_pressed(dir):
 			move(dir)
+
 			#update_animation_parameters(inputs[dir])
 			
 		#if not is_moving:

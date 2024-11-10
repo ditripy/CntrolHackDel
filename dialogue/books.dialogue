@@ -1,0 +1,12 @@
+~ librarybook
+Book: To make a water filter, you need\: 
+		three plastic containers with lids,
+		 nails, pliers and a fire source,
+		 a bed sheet or fine cotton cloth,
+		 charchoal,
+		 fine sand,
+		 pebbles of gravel,
+		 thyme, pine needles and resin, rosemary, eucalyptus
+		 clear plastic battles
+set visited_library = "true"
+=> END
