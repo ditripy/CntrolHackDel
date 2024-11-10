@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c60b3s6cf4j3k"]
+
+[ext_resource type="Texture2D" uid="uid://dok3vh3ij572s" path="res://Art/slime spritesheet calciumtrice.png" id="1_dtprx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rmmnc"]
+size = Vector2(13, 11)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_dtprx")
+hframes = 10
+vframes = 20
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 10.5)
+shape = SubResource("RectangleShape2D_rmmnc")
