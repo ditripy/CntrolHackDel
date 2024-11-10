@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bvxc0sj5ss8y5"]
 
-[ext_resource type="Script" path="res://Character/characters/player_slime.gd" id="1_jjyet"]
+[ext_resource type="Script" path="res://character/characters/player_slime.gd" id="1_jjyet"]
 [ext_resource type="Texture2D" uid="uid://dok3vh3ij572s" path="res://Art/slime spritesheet calciumtrice.png" id="1_lpruw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_abskl"]

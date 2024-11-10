@@ -1,9 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://dgakmv82sftui"]
+[gd_scene load_steps=5 format=3 uid="uid://dgakmv82sftui"]
 
-[ext_resource type="Script" path="res://Character/characters/player_slime.gd" id="1_y6nu8"]
+[ext_resource type="Script" path="res://character/characters/player_slime.gd" id="1_y6nu8"]
 [ext_resource type="Texture2D" uid="uid://dok3vh3ij572s" path="res://Art/slime spritesheet calciumtrice.png" id="2_gmdh3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_abskl"]
+size = Vector2(13, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3tuyc"]
 size = Vector2(13, 11)
 
 [node name="Player Slime" type="CharacterBody2D"]
@@ -18,3 +21,11 @@ vframes = 20
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 10.5)
 shape = SubResource("RectangleShape2D_abskl")
+
+[node name="InteractArea" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
+position = Vector2(-0.5, 10.5)
+shape = SubResource("RectangleShape2D_3tuyc")
