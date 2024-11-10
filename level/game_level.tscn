@@ -1,12 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://bwsueb6xig5b"]
+[gd_scene load_steps=2 format=3 uid="uid://bwsueb6xig5b"]
 
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" path="res://Character/player.tscn" id="1_orvnh"]
 [ext_resource type="PackedScene" uid="uid://dpeakh6so01vq" path="res://map/map.tscn" id="2_4yw7w"]
+=======
+[ext_resource type="PackedScene" uid="uid://dpeakh6so01vq" path="res://Map/map.tscn" id="2_4yw7w"]
+>>>>>>> Stashed changes
 
 [node name="Game level" type="Node2D"]
-position = Vector2(-17, 53)
-metadata/_edit_group_ = true
 
+<<<<<<< Updated upstream
 
 [node name="Player Slime" parent="." instance=ExtResource("1_orvnh")]
 position = Vector2(1026, 582)
@@ -23,3 +26,6 @@ limit_top = -250
 limit_right = 1940
 limit_bottom = 1100
 editor_draw_limits = true
+=======
+[node name="map" parent="." instance=ExtResource("2_4yw7w")]
+>>>>>>> Stashed changes
