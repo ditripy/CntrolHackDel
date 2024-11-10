@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://clsrunrf3ebwx"]
+
+[ext_resource type="PackedScene" uid="uid://dpeakh6so01vq" path="res://map/map.tscn" id="1_8pwec"]
+[ext_resource type="PackedScene" uid="uid://bvxc0sj5ss8y5" path="res://character/characters/player_slime.tscn" id="2_ldofh"]
+
+[node name="main" type="Node"]
+
+[node name="map" parent="." instance=ExtResource("1_8pwec")]
+
+[node name="Player Slime" parent="." instance=ExtResource("2_ldofh")]
+position = Vector2(182, 304)
+metadata/_edit_group_ = true
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player Slime"]
+remote_path = NodePath("../../Camera2D")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(182, 304)
+zoom = Vector2(3, 3)
+limit_left = -2000
+limit_top = -1600
+limit_right = 2000
+limit_bottom = 1650
+editor_draw_limits = true
