@@ -1,3 +1,7 @@
-[gd_scene format=3 uid="uid://bwsueb6xig5b"]
+[gd_scene load_steps=2 format=3 uid="uid://bwsueb6xig5b"]
+
+[ext_resource type="PackedScene" uid="uid://dgakmv82sftui" path="res://Character/player.tscn" id="1_orvnh"]
 
 [node name="Game level" type="Node2D"]
+
+[node name="Player Slime" parent="." instance=ExtResource("1_orvnh")]
