@@ -1,4 +1,10 @@
+[gd_scene load_steps=22 format=3 uid="uid://dgakmv82sftui"]
 
+[ext_resource type="Script" path="res://Character/characters/player_slime.gd" id="1_y6nu8"]
+[ext_resource type="Texture2D" uid="uid://bg4gly6s75o6q" path="res://Art/Girl-Sheet.png" id="2_j85h6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_abskl"]
+size = Vector2(74, 69)
 
 [sub_resource type="Animation" id="Animation_xqe06"]
 length = 0.001
@@ -32,38 +38,6 @@ tracks/0/keys = {
 "values": [1, 2, 3]
 }
 
-[sub_resource type="Animation" id="Animation_ckhrm"]
-resource_name = "walk_back"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [12, 13, 14, 15]
-}
-
-[sub_resource type="Animation" id="Animation_1ycvf"]
-resource_name = "walk_front"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.166667, 0.333333, 0.5, 0.666667, 0.833333),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [16, 17, 18, 19, 20, 21]
-}
-
 [sub_resource type="Animation" id="Animation_qaw4g"]
 resource_name = "walk_left"
 loop_mode = 1
@@ -94,6 +68,38 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [8, 9, 10, 11]
+}
+
+[sub_resource type="Animation" id="Animation_ckhrm"]
+resource_name = "walk_back"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [12, 13, 14, 15]
+}
+
+[sub_resource type="Animation" id="Animation_1ycvf"]
+resource_name = "walk_front"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.333333, 0.5, 0.666667, 0.833333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [16, 17, 18, 19, 20, 21]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n7ymu"]
@@ -156,12 +162,19 @@ states/Walk/node = SubResource("AnimationNodeBlendSpace2D_ycy1g")
 states/Walk/position = Vector2(529, 99.25)
 transitions = ["Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_8p7q1"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_670hf"), "Start", "Idle", SubResource("AnimationNodeStateMachineTransition_x1aml")]
 
+[node name="Player Slime" type="CharacterBody2D"]
+position = Vector2(500, 396)
+script = ExtResource("1_y6nu8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-8, 0)
+scale = Vector2(3, 3)
 texture = ExtResource("2_j85h6")
 hframes = 44
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-
+position = Vector2(-9, 2)
 shape = SubResource("RectangleShape2D_abskl")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -174,6 +187,3 @@ tree_root = SubResource("AnimationNodeStateMachine_1ylfo")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Idle/blend_position = Vector2(-0.052, -0.1)
 parameters/Walk/blend_position = Vector2(0.104, 0.576652)
-
-[node name="RayCast2D" type="RayCast2D" parent="."]
-

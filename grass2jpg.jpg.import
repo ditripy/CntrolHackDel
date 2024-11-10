@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-
-path="res://.godot/imported/Girl-Sheet.png-4d9c4ea449c3a886bb95285f7dec89d4.ctex"
+uid="uid://beluvqx6snfyd"
+path="res://.godot/imported/grass2jpg.jpg-ec0684ab0e8bf4fd7336e7898826f778.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Girl-Sheet.png"
-dest_files=["res://.godot/imported/Girl-Sheet.png-4d9c4ea449c3a886bb95285f7dec89d4.ctex"]
+source_file="res://grass2jpg.jpg"
+dest_files=["res://.godot/imported/grass2jpg.jpg-ec0684ab0e8bf4fd7336e7898826f778.ctex"]
 
 [params]
 

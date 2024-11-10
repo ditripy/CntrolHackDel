@@ -6,7 +6,7 @@ extends CharacterBody2D
 
 var animation_speed = 3
 var moving = false 
-@onready var interactionArea: Area2D = $InteractionArea
+
 
 var tile_size = 16
 var inputs = {"right": Vector2.RIGHT,
@@ -27,11 +27,7 @@ func _unhandled_input(event):
 	for dir in inputs.keys():
 		if event.is_action_pressed(dir):
 			move(dir)
-	if Input.is_action_just_pressed("interact"):
-		var interation = interactionArea.get_overlapping_areas()
-		if (interation.size() > 0):
-			interation[0].action()
-			return
+
 			#update_animation_parameters(inputs[dir])
 			
 		#if not is_moving:
